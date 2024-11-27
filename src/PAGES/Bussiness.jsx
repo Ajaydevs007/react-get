@@ -21,7 +21,7 @@ function Bussiness() {
   const getBussiness = async () => {
     try {
       const result = await handlebussiness()
-      // console.log(result.data.articles);
+      // console.log(result);
       setbussiness(result.data.articles)
       console.log(bussiness);
 
@@ -45,9 +45,9 @@ function Bussiness() {
             {
               bussiness.length > 0 ?
 
-                bussiness.map(item => (
+                bussiness.map((item,index) => (
 
-                  <Col md={4} sm={12} lg={3} className='mb-3'>
+                  <Col md={4} sm={12} lg={3} className='mb-3' key={index}>
 
                     <Card style={{ height: "100%", color: 'white' }} className='rounded bg-dark border border-black p-4'>
                       <Card.Img variant="top" src={item?.urlToImage} height={'100%'} />

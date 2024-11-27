@@ -19,6 +19,8 @@ function Poltics() {
     try {
       const result = await handlepol()
       setpol(result.data.results)
+      console.log(pol);
+      
     }
     catch (err) {
       console.log(err);
@@ -37,9 +39,9 @@ function Poltics() {
             {
               pol.length > 0 ?
 
-                pol.map(item => (
+                pol.map((item,index) => (
 
-                  <Col md={4} sm={12} lg={3} className='mb-3' key={item?.article_id}>
+                  <Col md={4} sm={12} lg={3} className='mb-3' key={index}>
 
                     <Card style={{ height: "100%", color: 'white' }} className='rounded bg-dark border border-black p-4'>
                       <Card.Img variant="top" src={item?.image_url} />

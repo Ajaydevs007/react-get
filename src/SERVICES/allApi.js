@@ -13,7 +13,7 @@ export const handleheadlines = async () => {
 //get bussiness
 
 export const handlebussiness = async () => {
-    return await commonAPI('GET', 'https://newsapi.org/v2/everything?q=tesla&from=2024-10-26&sortBy=publishedAt&apiKey=b80cf336adbb4ce9b361fbbffb7467b0', "")
+    return await commonAPI('GET', 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b80cf336adbb4ce9b361fbbffb7467b0', "")
 }
 
 

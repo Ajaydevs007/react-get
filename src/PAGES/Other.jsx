@@ -40,9 +40,9 @@ function Other() {
             {
               others.length > 0 ?
 
-                others.map(item => (
+                others.map((item,index) => (
 
-                  <Col md={4} sm={12} lg={3} className='mb-3'>
+                  <Col md={4} sm={12} lg={3} className='mb-3' key={index}>
 
                     <Card style={{ height: "100%", color: 'white' }} className='rounded bg-dark border border-black p-4 mb-5'>
                       <Card.Img variant="top" src={item?.urlToImage} height={'100%'} />
